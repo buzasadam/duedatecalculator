@@ -8,8 +8,7 @@ use \DateTimeZone;
 
 /**
  * DateCalculator  Emarsys homework - Due Date Calculator
- *                 WORKDAY_START and WORKDAY_END can be flexible, but the solution doesn't handle that situation
- *                 when submit time is out of working time period
+ *                 WORKDAY_START and WORKDAY_END can be flexible
  *
  * @author Ádám Buzás
  */
@@ -35,10 +34,41 @@ class DateCalculator {
 
         $this->hours = $turnaroundtime;
 
+        $submittime = $this->submittimeCorrection($submittime);
+
         $submittime->setTime($submittime->format('H'), $submittime->format('i'), 0);
 
         return $this->calculateDate($submittime, $turnaroundtime);
 	  }
+
+
+    /**
+     * submittimeCorrection Correcting submittime, when it is out of working day
+     * @param  DateTime $submittime submit date and time
+     * @return DateTime             submit date and time corrected to workday period
+     */
+    public function submittimeCorrection(DateTime $submittime) :DateTime
+    {
+        $workdaystart = new DateTime();
+        $workdaystart->setTimeZone(new DateTimeZone('Europe/Budapest'));
+        $workdaystart->setTime(self::WORKDAY_START,0);
+
+        $workdayend = new DateTime();
+        $workdayend->setTimeZone(new DateTimeZone('Europe/Budapest'));
+        $workdayend->setTime(self::WORKDAY_END,0);
+
+        if ($submittime < $workdaystart)
+        {
+          $submittime = $workdaystart;
+        }
+
+        if ($submittime > $workdayend)
+        {
+          $submittime = $workdaystart->add(new DateInterval("PT24H"));
+        }
+
+        return $submittime;
+    }
 
     /**
      * timeToEndOfDay  Calculates the remaining time to the end of the workday

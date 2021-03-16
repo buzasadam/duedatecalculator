@@ -9,7 +9,7 @@ use \DateTime;
 $dc = new DateCalculator;
 $date = new DateTime();
 $date->setTimezone(new DateTimeZone('Europe/Budapest'));
-$turnaround = 7;
+$turnaround = 3;
 echo $date->format('Y-m-d H:i').'<br>';
 echo 'Turnaround: '.$turnaround.' hour(s)<br>';
 echo $dc->calculateDueDate($date,$turnaround);

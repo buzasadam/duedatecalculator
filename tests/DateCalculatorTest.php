@@ -2,6 +2,7 @@
 
 use PHPUnit\Framework\TestCase;
 use App\DateCalculator;
+use Other\Log;
 
 
 final class DateCalculatorTest extends TestCase
@@ -12,7 +13,8 @@ final class DateCalculatorTest extends TestCase
      */
     public function testCalculationZeroTurnAround() :void
     {
-        $dt = new DateCalculator();
+        $log = new Log;
+        $dt = new DateCalculator($log);
         $submittime = new DateTime();
         $submittime->setTimezone(new DateTimeZone('Europe/Budapest'));
         $turnaround = 0;
@@ -27,12 +29,13 @@ final class DateCalculatorTest extends TestCase
      */
     public function testCalculationSameDay() :void
     {
-        $dt = new DateCalculator();
+        $log = new Log;
+        $dt = new DateCalculator($log);
         $format = 'Y-m-d H:i:s';
-        $submittime = DateTime::createFromFormat($format, '2021-03-16 12:00:12');
+        $submittime = DateTime::createFromFormat($format, '2021-03-16 14:00:12');
         $turnaround = 2;
         $result = $dt->calculateDueDate($submittime, $turnaround);
-        $this->assertStringContainsString('2021-03-16 14:00', $result);
+        $this->assertStringContainsString('2021-03-16 16:00', $result);
      }
 
 
@@ -42,12 +45,13 @@ final class DateCalculatorTest extends TestCase
       */
      public function testCalculationNextDay() :void
      {
-       $dt = new DateCalculator();
+       $log = new Log;
+       $dt = new DateCalculator($log);
        $format = 'Y-m-d H:i:s';
-       $submittime = DateTime::createFromFormat($format, '2021-03-16 14:34:25');
+       $submittime = DateTime::createFromFormat($format, '2021-03-18 15:34:25');
        $turnaround = 8;
        $result = $dt->calculateDueDate($submittime, $turnaround);
-       $this->assertStringContainsString('2021-03-17 14:34', $result);
+       $this->assertStringContainsString('2021-03-19 15:34', $result);
      }
 
 
@@ -57,12 +61,13 @@ final class DateCalculatorTest extends TestCase
       */
      public function testCalculationNextSeveralDay() :void
      {
-       $dt = new DateCalculator();
+       $log = new Log;
+       $dt = new DateCalculator($log);
        $format = 'Y-m-d H:i:s';
-       $submittime = DateTime::createFromFormat($format, '2021-03-16 14:34:25');
+       $submittime = DateTime::createFromFormat($format, '2021-03-18 15:34:25');
        $turnaround = 22;
        $result = $dt->calculateDueDate($submittime, $turnaround);
-       $this->assertStringContainsString('2021-03-19 12:34', $result);
+       $this->assertStringContainsString('2021-03-23 13:34', $result);
      }
 
 
@@ -72,11 +77,12 @@ final class DateCalculatorTest extends TestCase
       */
      public function testCalculationNextWeek() :void
      {
-       $dt = new DateCalculator();
+       $log = new Log;
+       $dt = new DateCalculator($log);
        $format = 'Y-m-d H:i:s';
-       $submittime = DateTime::createFromFormat($format, '2021-03-16 14:34:25');
+       $submittime = DateTime::createFromFormat($format, '2021-03-18 15:34:25');
        $turnaround = 40;
        $result = $dt->calculateDueDate($submittime, $turnaround);
-       $this->assertStringContainsString('2021-03-23 14:34', $result);
+       $this->assertStringContainsString('2021-03-25 15:34', $result);
      }
 }

@@ -4,11 +4,13 @@
     "license": "MIT",
     "minimum-stability": "dev",
     "require": {
-        "php": ">=7.0.0"
+        "php": ">=7.0.0",
+        "php-di/php-di": "dev-master"
     },
     "autoload": {
         "psr-4": {
-            "App\\": "src/App/"
+            "App\\": "src/App/",
+            "Other\\": "src/Other/"
         }
     },
     "require-dev": {

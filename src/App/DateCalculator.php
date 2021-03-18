@@ -5,10 +5,12 @@ namespace App;
 use \DateTime;
 use \DateInterval;
 use \DateTimeZone;
+use Other\Log;
 
 /**
  * DateCalculator  Emarsys homework - Due Date Calculator
- *                 WORKDAY_START and WORKDAY_END can be flexible
+ *                 WORKDAY_START and WORKDAY_END can be flexible, but the solution doesn't handle that situation
+ *                 when submit time is out of working time period
  *
  * @author Ádám Buzás
  */
@@ -21,6 +23,18 @@ class DateCalculator {
     private $minutes = 0;
     private $hours = 0;
 
+    private $log;
+
+
+    /**
+     * __construct receiving outside parameters
+     * @param Log $log log handler instance
+     */
+    public function __construct(Log $log)
+    {
+      $this->log = $log;
+    }
+
     /**
      * calculateDueDate Incoming data prepare and running due date calculation
      *
@@ -29,6 +43,8 @@ class DateCalculator {
      * @return string                   due date and time formatted with TIME_FORMAT
      */
 	  public function calculateDueDate(DateTime $submittime,Int $turnaroundtime) {
+
+        $this->log->m_log('Use log inside');
 
         $this->minutes = $turnaroundtime*60;
 
@@ -44,27 +60,36 @@ class DateCalculator {
 
     /**
      * submittimeCorrection Correcting submittime, when it is out of working day
+     *
      * @param  DateTime $submittime submit date and time
      * @return DateTime             submit date and time corrected to workday period
      */
     public function submittimeCorrection(DateTime $submittime) :DateTime
     {
+        $year = $submittime->format('Y');
+        $month = $submittime->format('m');
+        $day = $submittime->format('d');
+
         $workdaystart = new DateTime();
         $workdaystart->setTimeZone(new DateTimeZone('Europe/Budapest'));
         $workdaystart->setTime(self::WORKDAY_START,0);
+        $workdaystart->setDate($year,$month,$day);
 
         $workdayend = new DateTime();
         $workdayend->setTimeZone(new DateTimeZone('Europe/Budapest'));
         $workdayend->setTime(self::WORKDAY_END,0);
+        $workdayend->setDate($year,$month,$day);
 
         if ($submittime < $workdaystart)
         {
           $submittime = $workdaystart;
+          $submittime = $this->nextWorkDay($submittime);
         }
 
         if ($submittime > $workdayend)
         {
           $submittime = $workdaystart->add(new DateInterval("PT24H"));
+          $submittime = $this->nextWorkDay($submittime);
         }
 
         return $submittime;
@@ -139,14 +164,31 @@ class DateCalculator {
 
         for ($i = 1; $i<=$shift['days']; $i++) {
             $starttime->add(new DateInterval("PT24H"));
-            if ($starttime->format('N') == 6)
-            {
-                $starttime->add(new DateInterval("PT48H"));
-            }
+            $starttime = $this->nextWorkDay($starttime);
         }
         $duetime = $starttime->add(new DateInterval("PT{$minutes}M"));
 
         return $duetime->format(self::TIME_FORMAT);
       }
+    }
+
+    /**
+     * nextWorkDay  finds the nex workday depending on received current date and time
+     * @param  DateTime $time current date and time
+     * @return DateTime $time next workday id needed 
+     */
+    public function nextWorkDay(DateTime $time)
+    {
+        if ($time->format('N') == 6)
+        {
+            $time->add(new DateInterval("PT48H"));
+        }
+
+        if ($time->format('N') == 7)
+        {
+            $time->add(new DateInterval("PT24H"));
+        }
+
+        return $time;
     }
 }

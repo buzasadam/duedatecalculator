@@ -50,9 +50,9 @@ class DateCalculator {
 
         $this->hours = $turnaroundtime;
 
-        $submittime = $this->submittimeCorrection($submittime);
-
         $submittime->setTime($submittime->format('H'), $submittime->format('i'), 0);
+
+        $submittime = $this->submittimeCorrection($submittime);
 
         return $this->calculateDate($submittime, $turnaroundtime);
 	  }
@@ -175,7 +175,7 @@ class DateCalculator {
     /**
      * nextWorkDay  finds the nex workday depending on received current date and time
      * @param  DateTime $time current date and time
-     * @return DateTime $time next workday id needed 
+     * @return DateTime $time next workday id needed
      */
     public function nextWorkDay(DateTime $time)
     {

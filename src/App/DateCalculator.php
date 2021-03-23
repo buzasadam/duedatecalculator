@@ -50,9 +50,15 @@ class DateCalculator {
 
         $this->hours = $turnaroundtime;
 
+        $this->log->m_log('Meghívott: '.$submittime->format(self::TIME_FORMAT));
+
         $submittime->setTime($submittime->format('H'), $submittime->format('i'), 0);
 
+        $this->log->m_log('Aznapi óra perc: '.$submittime->format(self::TIME_FORMAT));
+
         $submittime = $this->submittimeCorrection($submittime);
+
+        $this->log->m_log('Korrekciózott: '.$submittime->format(self::TIME_FORMAT));
 
         return $this->calculateDate($submittime, $turnaroundtime);
 	  }
@@ -103,9 +109,16 @@ class DateCalculator {
      */
     public function timeToEndOfDay(DateTime $submittime) :DateInterval
     {
+        $year = $submittime->format('Y');
+        $month = $submittime->format('m');
+        $day = $submittime->format('d');
+
         $targettime = new DateTime();
         $targettime->setTimezone(new DateTimeZone('Europe/Budapest'));
         $targettime->setTime(self::WORKDAY_END,0);
+        $targettime->setDate($year,$month,$day);
+
+        $this->log->m_log('Nap vége idő: '.$targettime->format(self::TIME_FORMAT));
 
         return $submittime->diff($targettime);
     }
@@ -117,6 +130,7 @@ class DateCalculator {
      */
     public function minutesToEndOfDay(DateInterval $time) :Int
     {
+        $this->log->m_log('Háralévő percek a nap végéig: '.($time->h*60+$time->i));
          return $time->h*60+$time->i;
     }
 
@@ -148,6 +162,10 @@ class DateCalculator {
       $leftofday = $this->timeToEndOfDay($submittime);
       $leftminutes = $this->minutesToEndOfDay($leftofday);
 
+      $year = $submittime->format('Y');
+      $month = $submittime->format('m');
+      $day = $submittime->format('d');
+
       if ($leftminutes > $this->minutes)
       {
           $duetime = $submittime->add(new DateInterval("PT{$turnaroundtime}H"));
@@ -161,6 +179,7 @@ class DateCalculator {
         $starttime = new DateTime();
         $starttime->setTimezone(new DateTimeZone('Europe/Budapest'));
         $starttime->setTime(self::WORKDAY_START,0);
+        $starttime->setDate($year,$month,$day);
 
         for ($i = 1; $i<=$shift['days']; $i++) {
             $starttime->add(new DateInterval("PT24H"));

@@ -1,0 +1,120 @@
+[Tue 2021-03-23 01:09:12 PM] Use log inside
+[Tue 2021-03-23 01:09:12 PM] Meghívott: 2021-03-23 13:09
+[Tue 2021-03-23 01:09:12 PM] Aznapi óra perc: 2021-03-23 13:09
+[Tue 2021-03-23 01:09:12 PM] Korrekciózott: 2021-03-23 13:09
+[Tue 2021-03-23 01:09:12 PM] Nap vége idő: 2021-03-23 17:00
+[Tue 2021-03-23 01:09:12 PM] Háralévő percek a nap végéig: 231
+[Tue 2021-03-23 01:09:12 PM] Use log inside
+[Tue 2021-03-23 01:09:12 PM] Meghívott: 2021-03-16 14:00
+[Tue 2021-03-23 01:09:12 PM] Aznapi óra perc: 2021-03-16 14:00
+[Tue 2021-03-23 01:09:12 PM] Korrekciózott: 2021-03-16 14:00
+[Tue 2021-03-23 01:09:12 PM] Nap vége idő: 2021-03-16 17:00
+[Tue 2021-03-23 01:09:12 PM] Háralévő percek a nap végéig: 180
+[Tue 2021-03-23 01:09:12 PM] Use log inside
+[Tue 2021-03-23 01:09:12 PM] Meghívott: 2021-03-18 15:34
+[Tue 2021-03-23 01:09:12 PM] Aznapi óra perc: 2021-03-18 15:34
+[Tue 2021-03-23 01:09:12 PM] Korrekciózott: 2021-03-18 15:34
+[Tue 2021-03-23 01:09:12 PM] Nap vége idő: 2021-03-18 17:00
+[Tue 2021-03-23 01:09:12 PM] Háralévő percek a nap végéig: 86
+[Tue 2021-03-23 01:09:12 PM] Use log inside
+[Tue 2021-03-23 01:09:12 PM] Meghívott: 2021-03-18 15:34
+[Tue 2021-03-23 01:09:12 PM] Aznapi óra perc: 2021-03-18 15:34
+[Tue 2021-03-23 01:09:12 PM] Korrekciózott: 2021-03-18 15:34
+[Tue 2021-03-23 01:09:12 PM] Nap vége idő: 2021-03-18 17:00
+[Tue 2021-03-23 01:09:12 PM] Háralévő percek a nap végéig: 86
+[Tue 2021-03-23 01:09:12 PM] Use log inside
+[Tue 2021-03-23 01:09:12 PM] Meghívott: 2021-03-18 15:34
+[Tue 2021-03-23 01:09:12 PM] Aznapi óra perc: 2021-03-18 15:34
+[Tue 2021-03-23 01:09:12 PM] Korrekciózott: 2021-03-18 15:34
+[Tue 2021-03-23 01:09:12 PM] Nap vége idő: 2021-03-18 17:00
+[Tue 2021-03-23 01:09:12 PM] Háralévő percek a nap végéig: 86
+[Tue 2021-03-23 01:10:32 PM] Use log inside
+[Tue 2021-03-23 01:10:32 PM] Meghívott: 2021-03-23 13:10
+[Tue 2021-03-23 01:10:32 PM] Aznapi óra perc: 2021-03-23 13:10
+[Tue 2021-03-23 01:10:32 PM] Korrekciózott: 2021-03-23 13:10
+[Tue 2021-03-23 01:10:32 PM] Nap vége idő: 2021-03-23 17:00
+[Tue 2021-03-23 01:10:32 PM] Háralévő percek a nap végéig: 230
+[Tue 2021-03-23 01:10:32 PM] Use log inside
+[Tue 2021-03-23 01:10:32 PM] Meghívott: 2021-03-16 14:00
+[Tue 2021-03-23 01:10:32 PM] Aznapi óra perc: 2021-03-16 14:00
+[Tue 2021-03-23 01:10:32 PM] Korrekciózott: 2021-03-16 14:00
+[Tue 2021-03-23 01:10:32 PM] Nap vége idő: 2021-03-16 17:00
+[Tue 2021-03-23 01:10:32 PM] Háralévő percek a nap végéig: 180
+[Tue 2021-03-23 01:10:32 PM] Use log inside
+[Tue 2021-03-23 01:10:32 PM] Meghívott: 2021-03-18 15:34
+[Tue 2021-03-23 01:10:32 PM] Aznapi óra perc: 2021-03-18 15:34
+[Tue 2021-03-23 01:10:32 PM] Korrekciózott: 2021-03-18 15:34
+[Tue 2021-03-23 01:10:32 PM] Nap vége idő: 2021-03-18 17:00
+[Tue 2021-03-23 01:10:32 PM] Háralévő percek a nap végéig: 86
+[Tue 2021-03-23 01:10:32 PM] Use log inside
+[Tue 2021-03-23 01:10:32 PM] Meghívott: 2021-03-18 15:34
+[Tue 2021-03-23 01:10:32 PM] Aznapi óra perc: 2021-03-18 15:34
+[Tue 2021-03-23 01:10:32 PM] Korrekciózott: 2021-03-18 15:34
+[Tue 2021-03-23 01:10:32 PM] Nap vége idő: 2021-03-18 17:00
+[Tue 2021-03-23 01:10:32 PM] Háralévő percek a nap végéig: 86
+[Tue 2021-03-23 01:10:32 PM] Use log inside
+[Tue 2021-03-23 01:10:32 PM] Meghívott: 2021-03-18 15:34
+[Tue 2021-03-23 01:10:32 PM] Aznapi óra perc: 2021-03-18 15:34
+[Tue 2021-03-23 01:10:32 PM] Korrekciózott: 2021-03-18 15:34
+[Tue 2021-03-23 01:10:32 PM] Nap vége idő: 2021-03-18 17:00
+[Tue 2021-03-23 01:10:32 PM] Háralévő percek a nap végéig: 86
+[Tue 2021-03-23 01:10:38 PM] Use log inside
+[Tue 2021-03-23 01:10:38 PM] Meghívott: 2021-03-23 13:10
+[Tue 2021-03-23 01:10:38 PM] Aznapi óra perc: 2021-03-23 13:10
+[Tue 2021-03-23 01:10:38 PM] Korrekciózott: 2021-03-23 13:10
+[Tue 2021-03-23 01:10:38 PM] Nap vége idő: 2021-03-23 17:00
+[Tue 2021-03-23 01:10:38 PM] Háralévő percek a nap végéig: 230
+[Tue 2021-03-23 01:10:38 PM] Use log inside
+[Tue 2021-03-23 01:10:38 PM] Meghívott: 2021-03-16 14:00
+[Tue 2021-03-23 01:10:38 PM] Aznapi óra perc: 2021-03-16 14:00
+[Tue 2021-03-23 01:10:38 PM] Korrekciózott: 2021-03-16 14:00
+[Tue 2021-03-23 01:10:38 PM] Nap vége idő: 2021-03-16 17:00
+[Tue 2021-03-23 01:10:38 PM] Háralévő percek a nap végéig: 180
+[Tue 2021-03-23 01:10:38 PM] Use log inside
+[Tue 2021-03-23 01:10:38 PM] Meghívott: 2021-03-18 15:34
+[Tue 2021-03-23 01:10:38 PM] Aznapi óra perc: 2021-03-18 15:34
+[Tue 2021-03-23 01:10:38 PM] Korrekciózott: 2021-03-18 15:34
+[Tue 2021-03-23 01:10:38 PM] Nap vége idő: 2021-03-18 17:00
+[Tue 2021-03-23 01:10:38 PM] Háralévő percek a nap végéig: 86
+[Tue 2021-03-23 01:10:38 PM] Use log inside
+[Tue 2021-03-23 01:10:38 PM] Meghívott: 2021-03-18 15:34
+[Tue 2021-03-23 01:10:38 PM] Aznapi óra perc: 2021-03-18 15:34
+[Tue 2021-03-23 01:10:38 PM] Korrekciózott: 2021-03-18 15:34
+[Tue 2021-03-23 01:10:38 PM] Nap vége idő: 2021-03-18 17:00
+[Tue 2021-03-23 01:10:38 PM] Háralévő percek a nap végéig: 86
+[Tue 2021-03-23 01:10:38 PM] Use log inside
+[Tue 2021-03-23 01:10:38 PM] Meghívott: 2021-03-18 15:34
+[Tue 2021-03-23 01:10:38 PM] Aznapi óra perc: 2021-03-18 15:34
+[Tue 2021-03-23 01:10:38 PM] Korrekciózott: 2021-03-18 15:34
+[Tue 2021-03-23 01:10:38 PM] Nap vége idő: 2021-03-18 17:00
+[Tue 2021-03-23 01:10:38 PM] Háralévő percek a nap végéig: 86
+[Tue 2021-03-23 01:11:03 PM] Use log inside
+[Tue 2021-03-23 01:11:03 PM] Meghívott: 2021-03-23 13:11
+[Tue 2021-03-23 01:11:03 PM] Aznapi óra perc: 2021-03-23 13:11
+[Tue 2021-03-23 01:11:03 PM] Korrekciózott: 2021-03-23 13:11
+[Tue 2021-03-23 01:11:03 PM] Nap vége idő: 2021-03-23 17:00
+[Tue 2021-03-23 01:11:03 PM] Háralévő percek a nap végéig: 229
+[Tue 2021-03-23 01:11:03 PM] Use log inside
+[Tue 2021-03-23 01:11:03 PM] Meghívott: 2021-03-16 14:00
+[Tue 2021-03-23 01:11:03 PM] Aznapi óra perc: 2021-03-16 14:00
+[Tue 2021-03-23 01:11:03 PM] Korrekciózott: 2021-03-16 14:00
+[Tue 2021-03-23 01:11:03 PM] Nap vége idő: 2021-03-16 17:00
+[Tue 2021-03-23 01:11:03 PM] Háralévő percek a nap végéig: 180
+[Tue 2021-03-23 01:11:03 PM] Use log inside
+[Tue 2021-03-23 01:11:03 PM] Meghívott: 2021-03-18 15:34
+[Tue 2021-03-23 01:11:03 PM] Aznapi óra perc: 2021-03-18 15:34
+[Tue 2021-03-23 01:11:03 PM] Korrekciózott: 2021-03-18 15:34
+[Tue 2021-03-23 01:11:03 PM] Nap vége idő: 2021-03-18 17:00
+[Tue 2021-03-23 01:11:03 PM] Háralévő percek a nap végéig: 86
+[Tue 2021-03-23 01:11:03 PM] Use log inside
+[Tue 2021-03-23 01:11:03 PM] Meghívott: 2021-03-18 15:34
+[Tue 2021-03-23 01:11:03 PM] Aznapi óra perc: 2021-03-18 15:34
+[Tue 2021-03-23 01:11:03 PM] Korrekciózott: 2021-03-18 15:34
+[Tue 2021-03-23 01:11:03 PM] Nap vége idő: 2021-03-18 17:00
+[Tue 2021-03-23 01:11:03 PM] Háralévő percek a nap végéig: 86
+[Tue 2021-03-23 01:11:03 PM] Use log inside
+[Tue 2021-03-23 01:11:03 PM] Meghívott: 2021-03-18 15:34
+[Tue 2021-03-23 01:11:03 PM] Aznapi óra perc: 2021-03-18 15:34
+[Tue 2021-03-23 01:11:03 PM] Korrekciózott: 2021-03-18 15:34
+[Tue 2021-03-23 01:11:03 PM] Nap vége idő: 2021-03-18 17:00
+[Tue 2021-03-23 01:11:03 PM] Háralévő percek a nap végéig: 86

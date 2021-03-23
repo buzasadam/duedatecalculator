@@ -5,14 +5,26 @@ require_once __DIR__ . '/vendor/autoload.php';
 
 use App\DateCalculator;
 use Other\Log;
-//use \DateTime;
+use Container\DIContainer;
 
-$log = new Log;
-$log->m_log('Use log outside');
-$dc = new DateCalculator($log);
+// A container regisztrálja a függőségeket __contruct alapján
+$container = new DIContainer;
+
+// App\DateCalculator hozzáadása a containerher
+// ezért nem kell előtte Log egyedet létrehozni
+$container->set('App\DateCalculator');
+
+// App\DateCalculator egyed létrehozása konténerből
+$dc = $container->get('App\DateCalculator');
+
+// Jelenlegi időpont és időzóna beállítás
 $date = new DateTime();
 $date->setTimezone(new DateTimeZone('Europe/Budapest'));
-$turnaround = 8;
+
+// Válaszadási határidő
+$turnaround = 5;
+
+// Eredmény
 echo $date->format('Y-m-d H:i').'<br>';
 echo 'Turnaround: '.$turnaround.' hour(s)<br>';
 echo $dc->calculateDueDate($date,$turnaround);
